@@ -5,7 +5,7 @@ const videoController = require('../controllers/videoController');
 
 router.post('/upload', upload.single('video'), videoController.uploadVideo);
 router.post('/:id/trim', videoController.trimVideo);
-router.post('/videos/:id/subtitles',videoController.addSubtitles)
-router.get('/render/:id',videoController.renderFinalVideo)
-router.get('/videos/:id/download',videoController.downloadFinalVideo)
+router.post('/:id/subtitles',videoController.addSubtitles)
+router.get('/:id/render',videoController.renderFinalVideo)
+router.get('/:id/download',videoController.downloadFinalVideo)
 module.exports = router;
